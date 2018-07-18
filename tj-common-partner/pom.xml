@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.tj</groupId>
+		<artifactId>tj-common</artifactId>
+		<version>1.0</version>
+	</parent>
+	<artifactId>tj-common-partner</artifactId>
+	<name>tj-common-partner</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.tj</groupId>
+			<artifactId>tj-common-lang</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tj</groupId>
+			<artifactId>tj-common-http</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.tj</groupId>
+			<artifactId>tj-common-activemq</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.qiniu</groupId>
+			<artifactId>qiniu-java-sdk</artifactId>
+		</dependency>
+	</dependencies>
+</project>
