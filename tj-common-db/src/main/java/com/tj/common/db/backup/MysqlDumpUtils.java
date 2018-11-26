@@ -203,6 +203,10 @@ public class MysqlDumpUtils {
 			sb.append(conditon);
 			sb.append("\"");
 		}
+		// by fuqq on 20181126 导出所有schema和table
+		if(StringUtils.isAnyBlank(dbName) && StringUtils.isBlank(table) && StringUtils.isBlank(conditon)){
+			sb.append(" --all-databases ");
+		}
 		sb.append(" --result-file=");
 		String filePath = getBackupFilePath(backUpDir, backupSqlFileName);
 		sb.append(filePath);
@@ -320,6 +324,10 @@ public class MysqlDumpUtils {
 			IOUtils.close(fChannel);
 		}
 		return lineList;
+	}
+
+	public static void main(String[] args) throws IOException {
+		System.out.println(dumpAllDatabases("localhost", 3306, "root", "root", null, "D://wahaha", "backUpFile.dump"));
 	}
 
 }
